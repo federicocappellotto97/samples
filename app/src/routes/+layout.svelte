@@ -1,17 +1,14 @@
 <script>
+	import Header from '../components/organisms/Header.svelte';
 	import '../styles/app.css';
 	/** @type {import('./$types').LayoutData} */
 	export let data;
-
-	console.log(data);
+	const { title, description } = data;
 </script>
 
-<a href="/">Llllf</a>
-	import Header from '../components/organisms/Header.svelte';
-	/** @type {import('./$types').LayoutData} */
-	export let data;
-	const { title } = data;
-</script>
-
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+</svelte:head>
 <Header {title} />
 <slot />

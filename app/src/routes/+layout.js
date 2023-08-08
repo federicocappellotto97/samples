@@ -1,13 +1,13 @@
+import { client } from '../sanity';
+
 /** @type {import('./$types').LayoutLoad} */
 export async function load() {
-	return {
-		menu: {
-			lorem: 'ipsum'
-		}
-	const response = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
-	const res = await response.json();
-	console.log(res.chartName);
-	return {
-		title: res.chartName
-	};
+	const query = /* groq */ `*[_type == "settings"][0] {
+        "title": title[_key == "en"][0].value,
+        "description": description[_key == "en"][0].value,
+    }`;
+	const data = await client.fetch(query);
+	console.log(data);
+
+	return data;
 }

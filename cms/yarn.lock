@@ -1742,7 +1742,7 @@
     "@sanity/icons" "^1.3"
     react-copy-to-clipboard "^5.1.0"
 
-"@sanity/language-filter@^3.1.2":
+"@sanity/language-filter@^3.1.2", "@sanity/language-filter@^3.2.1":
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/@sanity/language-filter/-/language-filter-3.2.1.tgz#f87566da913a3309f2abd95e69bf2baf933766d2"
   integrity sha512-QSPUZ3frdUF+v2WQHwBu/27ivD1Oja4AYSphtpqwyIftxMVcSyiX8x4aqlBw+jisvquypqgMDbzVP4z87o6OoA==

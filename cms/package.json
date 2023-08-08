@@ -17,6 +17,7 @@
   "dependencies": {
     "@sanity/document-internationalization": "^2.0.1",
     "@sanity/icons": "^2.1.0",
+    "@sanity/language-filter": "^3.2.1",
     "@sanity/ui": "^1.2.0",
     "@sanity/vision": "^3.14.5",
     "react": "^18.2.0",

@@ -17,11 +17,6 @@ export default defineType({
       title: 'Site Description',
       type: 'internationalizedArrayText',
     }),
-    defineField({
-      title: 'Logo',
-      name: 'logo',
-      type: 'image',
-    }),
   ],
   preview: {
     select: {
