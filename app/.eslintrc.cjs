@@ -1,6 +1,11 @@
 module.exports = {
 	root: true,
-	extends: ['eslint:recommended', 'plugin:svelte/recommended', 'prettier'],
+	extends: [
+		'eslint:recommended',
+		'plugin:svelte/recommended',
+		'prettier',
+		'plugin:storybook/recommended'
+	],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
@@ -10,5 +15,9 @@ module.exports = {
 		browser: true,
 		es2017: true,
 		node: true
+	},
+	"plugins": ["prettier"],
+	"rules": {
+		"prettier/prettier": "error"
 	}
 };
