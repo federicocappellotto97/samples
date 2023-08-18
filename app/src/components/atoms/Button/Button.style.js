@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
-	'border-2 inline-block overflow-hidden relative rounded-lg shadow-lg border-black py-4 px-8 font-bold leading-none tracking-widest transition-all duration-200 ease-out group disabled:opacity-50 disabled:cursor-not-allowed',
+	'border-2 inline-block overflow-hidden relative rounded-lg shadow-lg border-black py-4 px-8 font-semibold leading-none tracking-widest transition-all duration-200 ease-out group disabled:opacity-50 disabled:cursor-not-allowed',
 	{
 		variants: {
 			variant: {

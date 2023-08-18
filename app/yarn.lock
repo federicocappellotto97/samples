@@ -10537,6 +10537,7 @@ __metadata:
     storybook: ^7.3.0
     svelte: ^4.0.5
     svelte-check: ^3.4.3
+    svelte-icons: ^2.1.0
     tailwind-merge: ^1.14.0
     tailwindcss: ^3.3.3
     typescript: ^5.0.0
@@ -11141,6 +11142,13 @@ __metadata:
   peerDependencies:
     svelte: ^3.19.0 || ^4.0.0
   checksum: 09518aad14288b15e723e69376d2044330f52f49c2730a5e1357b4bee5928c04c5e4022f713856f51ef08ccf3fb5639e870ac89a44c0cb573cedf395017e2402
+  languageName: node
+  linkType: hard
+
+"svelte-icons@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "svelte-icons@npm:2.1.0"
+  checksum: a32e305152be010a694cc7afe5848fb8f88dd2dba36624cbd3c92a2bf54e5683c57c44b4faa31bccee19cf9cc855158e588591672c4ae89984e3500bef0c488a
   languageName: node
   linkType: hard
 
