@@ -16,6 +16,7 @@ export default {
 				sans: ['Work Sans', ...defaultTheme.fontFamily.sans]
 			},
 			boxShadow: {
+				sm: '1px 2px 0px 0px rgba(0,0,0)',
 				md: '2px 4px 0px 0px rgba(0,0,0)',
 				lg: '4px 6px 0px 0px rgba(0,0,0)'
 			}
