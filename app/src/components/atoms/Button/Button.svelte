@@ -8,7 +8,7 @@
 	export let disabled;
 </script>
 
-<button class={button({ variant })} on:click={handleClick} {disabled}>
+<button class={button({ variant })} on:click={handleClick} {disabled} {...$$restProps}>
 	<span class={buttonChild({ variant })} />
 	<span class="relative"><slot /></span>
 </button>
