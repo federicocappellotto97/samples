@@ -1,0 +1,18 @@
+<script>
+	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
+
+	import {{pascalCase name}} from './{{pascalCase name}}.svelte';
+</script>
+
+<Meta
+	title="Atoms/{{pascalCase name}}"
+	component={{{pascalCase name}}}
+	argTypes=\{{}}
+	args=\{{}}
+/>
+
+<Template let:args>
+	<{{pascalCase name}} {...args} />
+</Template>
+
+<Story name="Default" args=\{{}} />
