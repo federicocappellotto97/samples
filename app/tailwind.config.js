@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
@@ -14,6 +16,7 @@ export default {
 				sans: ['Work Sans', ...defaultTheme.fontFamily.sans]
 			},
 			boxShadow: {
+				md: '2px 4px 0px 0px rgba(0,0,0)',
 				lg: '4px 6px 0px 0px rgba(0,0,0)'
 			}
 		},
@@ -29,5 +32,30 @@ export default {
 			32: '2rem'
 		}
 	},
-	plugins: []
+	plugins: [
+		plugin(function ({ addUtilities }) {
+			addUtilities({
+				'.center': {
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center'
+				}
+			});
+		}),
+		require('@tailwindcss/forms'),
+		require('@tailwindcss/typography'),
+		plugin(function groupPeer({ addVariant }) {
+			let pseudoVariants = ['checked'].map((variant) =>
+				Array.isArray(variant) ? variant : [variant, `&:${variant}`]
+			);
+
+			for (let [variantName, state] of pseudoVariants) {
+				addVariant(`group-peer-${variantName}`, (ctx) => {
+					let result = typeof state === 'function' ? state(ctx) : state;
+					return result.replace(/&(\S+)/, ':merge(.peer)$1 ~ .group &');
+				});
+			}
+		})
+	],
+	darkMode: 'class'
 };
