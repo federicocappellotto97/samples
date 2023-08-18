@@ -6,28 +6,15 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#ffae00',
-				logo: {
-					gradients: {
-						primary: {
-							from: '#C471F5',
-							to: '#FA70CD'
-						},
-						secondary: {
-							from: "#FDB051",
-							via: "#F2203E",
-							to: "#5342D6"
-						},
-						tertiary: {
-							DEFAULT: '#383C93'
-						}
-					},
-					secondary: '#ffae00',
-					tertiary: '#00FFFF'
-				}
+				primary: '#fad61d',
+				secondary: '#2966cc',
+				tertiary: '#fa3236'
 			},
 			fontFamily: {
 				sans: ['Work Sans', ...defaultTheme.fontFamily.sans]
+			},
+			boxShadow: {
+				lg: '4px 6px 0px 0px rgba(0,0,0)'
 			}
 		}
 	},

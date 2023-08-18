@@ -4,7 +4,7 @@ import { withThemeByClassName } from '@storybook/addon-styling';
 import '../src/styles/app.css';
 import '../src/styles/fonts.css';
 
-/** @type { import('@storybook/svelte').Preview } */
+/** @type {import('@storybook/svelte').Preview} */
 const preview = {
 	parameters: {
 		actions: { argTypesRegex: '^on[A-Z].*' },

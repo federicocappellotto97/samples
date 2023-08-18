@@ -2,13 +2,13 @@ import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
-	'inline-block rounded-full border border-black bg-gradient-to-t px-8 py-4 leading-none tracking-widest transition-all duration-200 ease-out group-hover:-translate-x-2 group-hover:-translate-y-2',
+	'border-2 inline-block overflow-hidden relative rounded-lg shadow-lg border-black py-4 px-8 font-bold leading-none tracking-widest transition-all duration-200 ease-out group disabled:opacity-50 disabled:cursor-not-allowed',
 	{
 		variants: {
 			variant: {
-				primary: 'from-logo-gradients-primary-from to-logo-gradients-primary-to',
-				secondary: 'from-logo-gradients-secondary-from via-logo-gradients-secondary-via to-logo-gradients-secondary-to',
-				tertiary: 'bg-logo-gradients-tertiary text-white'
+				primary: 'bg-primary',
+				secondary: 'bg-secondary',
+				tertiary: 'bg-tertiary'
 			}
 		},
 		defaultVariants: {
@@ -23,20 +23,24 @@ const buttonVariants = cva(
  */
 export const button = (variants) => twMerge(buttonVariants(variants));
 
-const buttonChildOneVariants = cva(
-	'absolute left-0 top-0 -z-10 h-full w-full rounded-full border border-black transition-all duration-200 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1 bg-logo-secondary',
+const buttonChildVariants = cva(
+	'absolute left-1/2 top-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 scale-0 rounded-full transition-transform duration-300 ease-in-out group-enabled:group-hover:scale-105',
+	{
+		variants: {
+			variant: {
+				primary: 'bg-secondary',
+				secondary: 'bg-tertiary',
+				tertiary: 'bg-primary'
+			}
+		},
+		defaultVariants: {
+			variant: 'primary'
+		}
+	}
 );
 
 /**
  * @function
+ * @param {Object} variants
  */
-export const buttonChildOne = () => twMerge(buttonChildOneVariants());
-
-const buttonChildTwoVariants = cva(
-	'absolute left-0 top-0 -z-20 h-full w-full rounded-full border border-black bg-logo-tertiary',
-);
-
-/**
- * @function
- */
-export const buttonChildTwo = () => twMerge(buttonChildTwoVariants());
+export const buttonChild = (variants) => twMerge(buttonChildVariants(variants));

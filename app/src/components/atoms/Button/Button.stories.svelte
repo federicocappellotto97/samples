@@ -8,10 +8,20 @@
 	title="Atoms/Button"
 	component={Button}
 	argTypes={{
-		label: { control: 'text' }
+		label: { control: 'text' },
+		variant: {
+			control: 'radio',
+			options: ['primary', 'secondary', 'tertiary']
+		},
+		handleClick: {
+			table: {
+				disable: true
+			}
+		}
 	}}
 	args={{
-		label: 'Button'
+		label: 'Button',
+		disabled: false
 	}}
 />
 

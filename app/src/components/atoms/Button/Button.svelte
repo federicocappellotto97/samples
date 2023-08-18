@@ -1,16 +1,14 @@
 <script>
-	import { button, buttonChildOne, buttonChildTwo } from "./Button.style";
+	import { button, buttonChild } from './Button.style';
 	/** @type {string} */
-	export let variant
+	export let variant;
+	/** @type {() => void} */
+	export let handleClick;
+	/** @type {boolean} */
+	export let disabled;
 </script>
-<button class="group relative">
-	<span class={button({variant})}>
-		<slot />
-	</span>
-	<span
-		class={buttonChildOne()}
-	/>
-	<span
-		class={buttonChildTwo()}
-	/>
+
+<button class={button({ variant })} on:click={handleClick} {disabled}>
+	<span class={buttonChild({ variant })} />
+	<span class="relative"><slot /></span>
 </button>

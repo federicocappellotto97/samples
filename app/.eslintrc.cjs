@@ -16,8 +16,8 @@ module.exports = {
 		es2017: true,
 		node: true
 	},
-	"plugins": ["prettier"],
-	"rules": {
-		"prettier/prettier": "error"
+	plugins: ['prettier'],
+	rules: {
+		'prettier/prettier': 'error'
 	}
 };

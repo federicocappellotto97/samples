@@ -32,8 +32,9 @@
 		"eslint-plugin-svelte": "^2.30.0",
 		"postcss": "^8.4.27",
 		"prettier": "^3.0.2",
-		"prettier-plugin-svelte": "^2.10.1",
+		"prettier-plugin-svelte": "^3.0.3",
 		"prettier-plugin-tailwindcss": "^0.5.3",
+		"tailwind-merge": "^1.14.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"storybook": "^7.3.0",
@@ -48,16 +49,28 @@
 		"@sanity/client": "^6.4.4",
 		"class-variance-authority": "^0.7.0",
 		"eslint-plugin-prettier": "^5.0.0",
-		"prettier-plugin-jsdoc": "^1.0.1",
-		"tailwind-merge": "^1.14.0"
+		"prettier-plugin-jsdoc": "^1.0.1"
 	},
 	"prettier": {
 		"useTabs": true,
 		"singleQuote": true,
 		"trailingComma": "none",
 		"printWidth": 100,
-		"plugins": ["prettier-plugin-svelte", "prettier-plugin-jsdoc","prettier-plugin-tailwindcss"],
-		"pluginSearchDirs": ["."],
-		"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+		"plugins": [
+			"prettier-plugin-svelte",
+			"prettier-plugin-jsdoc",
+			"prettier-plugin-tailwindcss"
+		],
+		"pluginSearchDirs": [
+			"."
+		],
+		"overrides": [
+			{
+				"files": "*.svelte",
+				"options": {
+					"parser": "svelte"
+				}
+			}
+		]
 	}
 }
