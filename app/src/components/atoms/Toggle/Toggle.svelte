@@ -26,7 +26,7 @@
 	class={cx('inline-flex items-center gap-2', disabled ? 'cursor-not-allowed' : 'cursor-pointer')}
 >
 	{#if label}
-		<span class="text-14 font-medium leading-none text-black">{label}</span>
+		<span class="text-14 inline-block font-bold">{label}</span>
 	{/if}
 	<input
 		{...$$restProps}

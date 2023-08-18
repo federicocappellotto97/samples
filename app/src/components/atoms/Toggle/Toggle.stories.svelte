@@ -9,7 +9,9 @@
 	component="Toggle"
 	argTypes={{}}
 	args={{
-		defaultChecked: false
+		defaultChecked: false,
+		disabled: false,
+		label: ''
 	}}
 />
 
@@ -18,3 +20,9 @@
 </Template>
 
 <Story name="Default" args={{}} />
+<Story
+	name="Checked"
+	args={{
+		defaultChecked: true
+	}}
+/>
