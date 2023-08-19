@@ -20,17 +20,18 @@ export default function (plop) {
 				message: 'Has story?'
 			}
 		],
-		actions: [
-			{
-				type: 'add',
-				path: 'src/components/{{size}}/{{pascalCase name}}/{{pascalCase name}}.svelte',
-				templateFile: 'plops/component.hbs'
-			},
-			{
-				type: 'add',
-				path: 'src/components/{{size}}/{{pascalCase name}}/{{pascalCase name}}.stories.svelte',
-				templateFile: 'plops/component.stories.hbs'
-			}
-		]
+		actions: (data) =>
+			[
+				{
+					type: 'add',
+					path: 'src/components/{{size}}/{{pascalCase name}}/{{pascalCase name}}.svelte',
+					templateFile: 'plops/component.hbs'
+				},
+				data?.storybook && {
+					type: 'add',
+					path: 'src/components/{{size}}/{{pascalCase name}}/{{pascalCase name}}.stories.svelte',
+					templateFile: 'plops/component.stories.hbs'
+				}
+			].filter((d) => !!d)
 	});
 }

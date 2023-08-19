@@ -18,7 +18,7 @@
 	{/if}
 	<input {...$$restProps} type="checkbox" class="peer sr-only" {disabled} bind:checked />
 	<span
-		class="peer-checked:bg-primary group relative h-7 w-14 rounded-full border-2 border-black bg-gray-300 p-2 shadow-md transition-colors duration-300 ease-out peer-focus:outline-none peer-disabled:opacity-50"
+		class="peer-checked:bg-primary group relative h-7 w-14 rounded-full border-2 border-black bg-gray-300 p-2 shadow-md transition-colors duration-300 ease-out peer-focus:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-black peer-focus-visible:ring-offset-2 peer-disabled:opacity-50"
 	>
 		<span
 			class="group-peer-checked:left-[calc(100%_-_2px)] group-peer-checked:-translate-x-full absolute left-0.5 top-1/2 inline-flex aspect-square h-5 -translate-y-1/2 items-center justify-center rounded-full bg-black text-white transition-all"

@@ -9,9 +9,10 @@
 	component="RadioInput"
 	argTypes={{}}
 	args={{
-		defaultChecked: false,
 		disabled: false,
-		label: ''
+		label: '',
+		value: 'unchecked',
+		error: ''
 	}}
 />
 
@@ -24,6 +25,7 @@
 <Story
 	name="Checked"
 	args={{
-		defaultChecked: true
+		value: 'checked',
+		group: 'checked'
 	}}
 />

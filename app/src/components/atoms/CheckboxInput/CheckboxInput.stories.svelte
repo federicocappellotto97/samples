@@ -9,9 +9,10 @@
 	component="CheckboxInput"
 	argTypes={{}}
 	args={{
-		defaultChecked: false,
+		checked: false,
 		disabled: false,
-		label: ''
+		label: '',
+		error: ''
 	}}
 />
 
@@ -24,6 +25,6 @@
 <Story
 	name="Checked"
 	args={{
-		defaultChecked: true
+		checked: true
 	}}
 />

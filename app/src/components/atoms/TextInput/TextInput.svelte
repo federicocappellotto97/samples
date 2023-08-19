@@ -1,11 +1,12 @@
 <script>
 	import { typewriter } from '$lib/animations';
-	import { cx } from 'class-variance-authority';
-	import { input } from './TextInput.style';
 	import FaExclamationTriangle from 'svelte-icons/fa/FaExclamationTriangle.svelte';
 	import FaEye from 'svelte-icons/fa/FaEye.svelte';
 	import FaEyeSlash from 'svelte-icons/fa/FaEyeSlash.svelte';
 	import IoIosAt from 'svelte-icons/io/IoIosAt.svelte';
+	import { fade } from 'svelte/transition';
+	import { input } from './TextInput.style';
+	import InputError from '../InputError/InputError.svelte';
 	/** @type {boolean} */
 	export let disabled = false;
 	/** @type {string} */
@@ -22,9 +23,11 @@
 
 <div>
 	{#if label}
-		<label for={id} class="text-14 mb-1 inline-block font-bold">{label}</label>
+		<label for={id} class:opacity-50={disabled} class="text-14 mb-1 inline-block font-bold"
+			>{label}</label
+		>
 	{/if}
-	<div class="relative">
+	<div class="relative" class:opacity-50={disabled}>
 		<input
 			{id}
 			type={type == 'password' && showPassword ? 'text' : type}
@@ -53,13 +56,5 @@
 			</span>
 		{/if}
 	</div>
-	{#if !!error}
-		<p
-			transition:typewriter={{}}
-			class={cx('text-tertiary text-12 mt-3', disabled && 'opacity-50')}
-		>
-			<span class="mr-1 inline-block h-4 align-middle"><FaExclamationTriangle /></span>
-			{error}
-		</p>
-	{/if}
+	<InputError {error} {disabled} />
 </div>
