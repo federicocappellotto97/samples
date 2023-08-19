@@ -6,17 +6,20 @@
 	export let handleClick = () => {};
 	/** @type {boolean} */
 	export let disabled = false;
+	/** @type {string} */
+	export let classes = '';
 
 	let pressed = false;
 </script>
 
+<svelte:window on:mouseup={() => (pressed = false)} />
+
 <button
-	class={button({ variant, pressed })}
+	class={button({ variant, pressed, class: classes })}
 	on:click={handleClick}
 	{disabled}
 	{...$$restProps}
 	on:mousedown={() => (pressed = true)}
-	on:mouseup={() => (pressed = false)}
 >
 	<span class={buttonChild({ variant })} />
 	<span class="relative"><slot /></span>

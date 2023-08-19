@@ -2,13 +2,14 @@ import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
-	'border-2 inline-block overflow-hidden relative rounded-lg border-black py-4 px-8 font-semibold leading-none tracking-widest transition-all duration-200 ease-out group disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:outline-none',
+	'border-2 inline-block overflow-hidden relative border-black font-semibold leading-none tracking-widest transition-all duration-200 ease-out group disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:outline-none',
 	{
 		variants: {
 			variant: {
-				primary: 'bg-primary',
-				secondary: 'bg-secondary',
-				tertiary: 'bg-tertiary'
+				primary: 'bg-primary py-4 px-8 rounded-lg',
+				secondary: 'bg-secondary py-4 px-8 rounded-lg',
+				tertiary: 'bg-tertiary py-4 px-8 rounded-lg',
+				icon: 'w-10 aspect-square rounded-full p-1 bg-primary' //set shadow-md after merge
 			},
 			pressed: {
 				true: 'translate-x-[4px] translate-y-[6px]',
@@ -35,7 +36,8 @@ const buttonChildVariants = cva(
 			variant: {
 				primary: 'bg-secondary',
 				secondary: 'bg-tertiary',
-				tertiary: 'bg-primary'
+				tertiary: 'bg-primary',
+				icon: 'bg-secondary'
 			}
 		},
 		defaultVariants: {
