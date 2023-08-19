@@ -7,19 +7,7 @@
 	/** @type {boolean} */
 	export let disabled = false;
 	/** @type {boolean} */
-	export let defaultChecked = false;
-	let checked = defaultChecked;
-	/**
-	 * Event handler for checkbox change event.
-	 *
-	 * @param {Event} e - The event object.
-	 */
-	let handleChange = function (e) {
-		const target = e.target;
-		if (target instanceof HTMLInputElement) {
-			checked = target.checked;
-		}
-	};
+	export let checked = false;
 </script>
 
 <label
@@ -28,14 +16,7 @@
 	{#if label}
 		<span class="text-14 inline-block font-bold">{label}</span>
 	{/if}
-	<input
-		{...$$restProps}
-		type="checkbox"
-		class="peer sr-only"
-		{disabled}
-		{checked}
-		on:change={handleChange}
-	/>
+	<input {...$$restProps} type="checkbox" class="peer sr-only" {disabled} bind:checked />
 	<span
 		class="peer-checked:bg-primary group relative h-7 w-14 rounded-full border-2 border-black bg-gray-300 p-2 shadow-md transition-colors duration-300 ease-out peer-focus:outline-none peer-disabled:opacity-50"
 	>

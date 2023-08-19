@@ -43,8 +43,10 @@ export default {
 				}
 			});
 		}),
-		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
+		require('@tailwindcss/forms')({
+			strategy: 'class' // only generate classes
+		}),
 		plugin(function groupPeer({ addVariant }) {
 			let pseudoVariants = ['checked'].map((variant) =>
 				Array.isArray(variant) ? variant : [variant, `&:${variant}`]
