@@ -30,7 +30,8 @@ export default {
 			20: '1.25rem',
 			22: '1.375rem',
 			24: '1.5rem',
-			32: '2rem'
+			32: '2rem',
+			128: '8rem'
 		}
 	},
 	plugins: [
