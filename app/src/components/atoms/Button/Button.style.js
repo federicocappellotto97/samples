@@ -105,7 +105,7 @@ const buttonVariants = cva(
 export const button = (variants) => twMerge(buttonVariants(variants));
 
 const buttonChildVariants = cva(
-	'absolute left-1/2 top-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 scale-0 rounded-full transition-transform duration-300 ease-out group-enabled:group-hover:scale-105',
+	'absolute left-1/2 top-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 scale-0 rounded-full transition-transform duration-300 ease-out sh:nd:group-hover:scale-105',
 	{
 		variants: {
 			variant: {

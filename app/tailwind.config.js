@@ -31,6 +31,7 @@ export default {
 			22: '1.375rem',
 			24: '1.5rem',
 			32: '2rem',
+			96: '6rem',
 			128: '8rem'
 		}
 	},
@@ -43,6 +44,10 @@ export default {
 					justifyContent: 'center'
 				}
 			});
+		}),
+		plugin(function ({ addVariant }) {
+			addVariant('nd', '&:not(:disabled)'); //Variant to style buttons when are not disabled
+			addVariant('sh', '@media(hover:hover)'); //Variant to style hover when device supports hover
 		}),
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/forms')({

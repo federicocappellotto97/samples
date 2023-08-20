@@ -1,5 +1,5 @@
 <script>
-	import Button from '../atoms/Button/Button.svelte';
+	import Button from '../../atoms/Button/Button.svelte';
 
 	/** @type {string} */
 	export let title;

@@ -1,5 +1,5 @@
 <script>
-	import Header from '../components/organisms/Header.svelte';
+	import Header from '../components/organisms/Header/Header.svelte';
 	import '../styles/app.css';
 	import '../styles/fonts.css';
 	/** @type {import('./$types').LayoutData} */

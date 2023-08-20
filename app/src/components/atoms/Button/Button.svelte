@@ -10,19 +10,27 @@
 	export let size = 'medium';
 	/** @type {string} */
 	export let classes = '';
+	/** @type {string} */
+	export let href = '';
+	/** @type {import('$lib/typedefs').Target} */
+	export let target = undefined;
 
 	let pressed = false;
 </script>
 
 <svelte:window on:mouseup={() => (pressed = false)} />
 
-<button
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<svelte:element
+	this={href ? 'a' : 'button'}
 	class={button({ variant, pressed, size, class: classes })}
 	on:click={handleClick}
+	{href}
+	{target}
 	{disabled}
 	{...$$restProps}
 	on:mousedown={() => (pressed = true)}
 >
 	<span class={buttonChild({ variant })} />
 	<span class="relative"><slot /></span>
-</button>
+</svelte:element>

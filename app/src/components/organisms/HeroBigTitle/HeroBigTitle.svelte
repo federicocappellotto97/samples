@@ -5,6 +5,8 @@
 	export let content = '';
 	/** @type {string} */
 	export let variant = 'primary';
+	/** @type {number} */
+	export let componentIndex = 0;
 </script>
 
 <div
@@ -12,6 +14,7 @@
 	class:bg-primary={variant === 'primary'}
 	class:bg-secondary={variant === 'secondary'}
 	class:bg-tertiary={variant === 'tertiary'}
+	class:border-t-2={componentIndex !== 0}
 >
 	<h1 class="text-128 font-medium">{title}</h1>
 	{#if content}
