@@ -5,8 +5,8 @@
 	export let title = '';
 	/** @type {string} */
 	export let content = '';
-	/** @type {import('$lib/typedefs').Link} */
-	export let link;
+	/** @type {import('$lib/typedefs').Link | undefined} */
+	export let link = undefined;
 	/** @type {string} */
 	export let variant = 'primary';
 	/** @type {number} */
@@ -19,7 +19,6 @@
 
 <div
 	class="grid grid-cols-2 border-b-2 border-black"
-	class:border-t-2={componentIndex !== 0}
 	class:bg-primary={variant === 'primary'}
 	class:bg-secondary={variant === 'secondary'}
 	class:bg-tertiary={variant === 'tertiary'}
@@ -32,7 +31,7 @@
 		{#if title}
 			<svelte:element
 				this={componentIndex === 0 ? 'h1' : 'h2'}
-				class="text-96 font-medium leading-tight"
+				class="text-96 font-medium leading-none"
 			>
 				{title}
 			</svelte:element>

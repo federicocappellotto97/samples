@@ -4,6 +4,7 @@
 	import SectionTextImage from '../organisms/SectionTextImage/SectionTextImage.svelte';
 	import Header from '../organisms/Header/Header.svelte';
 	import SectionGridTexts from '../organisms/SectionGridTexts/SectionGridTexts.svelte';
+	import Banner from '../organisms/Banner/Banner.svelte';
 </script>
 
 <Meta
@@ -36,7 +37,6 @@
 		title="Title"
 		content="<p>Lorem ipsum dolor sit amet</p>"
 		variant={args.variantHeroBigTitle}
-		componentIndex={0}
 	/>
 	<SectionTextImage
 		title="Lorem ipsum"
@@ -52,21 +52,19 @@
 			width: 2000,
 			height: 1000
 		}}
+		componentIndex={1}
 	/>
 	<SectionTextImage
 		title="Lorem ipsum"
 		content="<p>Lorem ipsum dolor sit amet</p>"
-		link={{
-			label: 'Link',
-			href: '#'
-		}}
-		variant={args.variantSectionTextImage}
+		variant={args.variantHeroBigTitle}
 		image={{
 			src: 'https://img.freepik.com/premium-vector/abstract-shapes-background-neo-brutalist-wave-design-wavy-banner-retro-brutalist-style_757611-811.jpg?w=2000',
 			alt: 'Lorem ipsum',
 			width: 2000,
 			height: 1000
 		}}
+		componentIndex={2}
 		reverse
 	/>
 	<SectionGridTexts
@@ -77,6 +75,14 @@
 			'<p>Lorem ipsum dolor sit amet</p>'
 		]}
 		variant={args.variantSectionGridTexts}
+	/>
+	<Banner
+		title="Lorem ipsum"
+		content="<p>Lorem ipsum dolor sit amet</p>"
+		link={{
+			label: 'Link',
+			href: '#'
+		}}
 	/>
 </Template>
 
