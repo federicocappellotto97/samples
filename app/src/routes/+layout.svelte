@@ -4,7 +4,8 @@
 	import '../styles/fonts.css';
 	/** @type {import('./$types').LayoutData} */
 	export let data;
-	const { title, description } = data;
+	const { settings, menu } = data;
+	const { title, description } = settings;
 </script>
 
 <svelte:head>
@@ -12,6 +13,10 @@
 	<meta name="description" content={description} />
 </svelte:head>
 
-<Header {title} />
+<main
+	class="mx-auto min-h-screen max-w-[2560px] overflow-hidden rounded-3xl border-2 border-black bg-sky-50"
+>
+	<Header {title} menu={menu.find((m) => m.key == 'primary')} />
 
-<slot />
+	<slot />
+</main>

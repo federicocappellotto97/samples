@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
-	'border-2 inline-block overflow-hidden relative rounded-lg border-black py-4 px-8 font-semibold leading-none tracking-widest transition-all duration-200 ease-out group disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:outline-none',
+	'border-2 inline-block overflow-hidden relative rounded-lg border-black font-semibold leading-none tracking-widest transition-all duration-200 ease-out group disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:outline-none',
 	{
 		variants: {
 			variant: {
@@ -11,13 +11,40 @@ const buttonVariants = cva(
 				tertiary: 'bg-tertiary'
 			},
 			pressed: {
-				true: 'translate-x-[4px] translate-y-[6px]',
-				false: 'shadow-lg'
+				true: '',
+				false: ''
+			},
+			size: {
+				small: 'text-14 py-2 px-4',
+				medium: 'text-16 py-4 px-8'
 			}
 		},
+		compoundVariants: [
+			{
+				size: 'medium',
+				pressed: false,
+				class: 'shadow-lg'
+			},
+			{
+				size: 'medium',
+				pressed: true,
+				class: 'translate-x-[4px] translate-y-[6px]'
+			},
+			{
+				size: 'small',
+				pressed: false,
+				class: 'shadow-md'
+			},
+			{
+				size: 'small',
+				pressed: true,
+				class: 'translate-x-[2px] translate-y-[4px]'
+			}
+		],
 		defaultVariants: {
 			variant: 'primary',
-			pressed: false
+			pressed: false,
+			size: 'medium'
 		}
 	}
 );

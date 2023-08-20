@@ -9,8 +9,8 @@ export default {
 		extend: {
 			colors: {
 				primary: '#fad61d',
-				secondary: '#2966cc',
-				tertiary: '#fa3236'
+				secondary: '#a174ff',
+				tertiary: '#ff6b6b'
 			},
 			fontFamily: {
 				sans: ['Work Sans', ...defaultTheme.fontFamily.sans]

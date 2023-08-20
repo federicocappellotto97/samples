@@ -6,12 +6,14 @@
 	export let handleClick = () => {};
 	/** @type {boolean} */
 	export let disabled = false;
+	/** @type {'small' | 'medium'} */
+	export let size = 'medium';
 
 	let pressed = false;
 </script>
 
 <button
-	class={button({ variant, pressed })}
+	class={button({ variant, pressed, size })}
 	on:click={handleClick}
 	{disabled}
 	{...$$restProps}

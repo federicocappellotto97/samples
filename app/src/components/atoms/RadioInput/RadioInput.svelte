@@ -34,7 +34,7 @@
 			>
 		</span>
 		{#if label}
-			<span class="text-14 inline-block font-bold">{label}</span>
+			<span class="text-14 inline-block font-bold leading-none">{label}</span>
 		{/if}
 	</label>
 	<InputError {error} {disabled} />

@@ -1,12 +1,9 @@
 <script>
-	import { typewriter } from '$lib/animations';
-	import FaExclamationTriangle from 'svelte-icons/fa/FaExclamationTriangle.svelte';
 	import FaEye from 'svelte-icons/fa/FaEye.svelte';
 	import FaEyeSlash from 'svelte-icons/fa/FaEyeSlash.svelte';
 	import IoIosAt from 'svelte-icons/io/IoIosAt.svelte';
-	import { fade } from 'svelte/transition';
-	import { input } from './TextInput.style';
 	import InputError from '../InputError/InputError.svelte';
+	import { input } from './TextInput.style';
 	/** @type {boolean} */
 	export let disabled = false;
 	/** @type {string} */
@@ -16,7 +13,7 @@
 	/** @type {string} */
 	export let label = '';
 	/** @type {string} */
-	export let id;
+	export let id = '';
 
 	let showPassword = false;
 </script>

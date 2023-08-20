@@ -11,7 +11,8 @@
 	args={{
 		placeholder: 'Select an option',
 		error: '',
-		required: true
+		required: true,
+		label: 'Select'
 	}}
 />
 
