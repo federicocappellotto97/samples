@@ -11,18 +11,24 @@
 	export let variant = 'primary';
 	/** @type {number} */
 	export let componentIndex = 0;
-	/** @type {import('$lib/typedefs').Image} */
-	export let image;
+	/** @type {import('$lib/typedefs').Image | undefined} [image] */
+	export let image = undefined;
+	/** @type {boolean} */
+	export let reverse = false;
 </script>
 
 <div
-	class="grid grid-cols-2 divide-x-2 divide-black border-b-2 border-black"
+	class="grid grid-cols-2 border-b-2 border-black"
 	class:border-t-2={componentIndex !== 0}
 	class:bg-primary={variant === 'primary'}
 	class:bg-secondary={variant === 'secondary'}
 	class:bg-tertiary={variant === 'tertiary'}
 >
-	<div class="flex flex-col items-baseline justify-center space-y-6 p-16">
+	<div
+		class="flex flex-col items-baseline justify-center space-y-6 p-16"
+		class:border-r-2={!reverse}
+		class:border-black={!reverse}
+	>
 		{#if title}
 			<svelte:element
 				this={componentIndex === 0 ? 'h1' : 'h2'}
@@ -41,7 +47,12 @@
 			<Button {...link} variant={linkVariant}>{link.label}</Button>
 		{/if}
 	</div>
-	<div class="relative aspect-square">
+	<div
+		class="relative aspect-square"
+		class:border-r-2={reverse}
+		class:border-black={reverse}
+		class:order-first={reverse}
+	>
 		{#if image}
 			<img
 				{...image}

@@ -4,7 +4,7 @@
 	/** @type {string} */
 	export let title;
 	/** @type {any} */
-	export let menu;
+	export let menu = {};
 	console.log(menu);
 </script>
 

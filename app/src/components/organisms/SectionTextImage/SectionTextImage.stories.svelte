@@ -25,7 +25,8 @@
 		image: {
 			src: 'https://img.freepik.com/premium-vector/abstract-shapes-background-neo-brutalist-wave-design-wavy-banner-retro-brutalist-style_757611-811.jpg?w=2000',
 			alt: 'Image'
-		}
+		},
+		reverse: false
 	}}
 	parameters={{
 		layout: 'fullscreen'

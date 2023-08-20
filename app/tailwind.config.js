@@ -10,7 +10,11 @@ export default {
 			colors: {
 				primary: '#fad61d',
 				secondary: '#a174ff',
-				tertiary: '#ff6b6b'
+				tertiary: '#ff6b6b',
+				quarterary: '#E1FA2A',
+				quinary: '#3796FA',
+				senary: '#FAA411',
+				setary: '#9405FA'
 			},
 			fontFamily: {
 				sans: ['Work Sans', ...defaultTheme.fontFamily.sans]
