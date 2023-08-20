@@ -9,12 +9,21 @@
 	title="Atoms/Button"
 	component={Button}
 	argTypes={{
-		label: { control: 'text' },
+		label: { control: 'text', if: { arg: 'variant', neq: 'icon' } },
 		variant: {
 			control: 'radio',
-			options: ['primary', 'secondary', 'tertiary']
+			options: ['primary', 'secondary', 'tertiary', 'icon']
+		},
+		size: {
+			control: 'radio',
+			options: ['small', 'medium']
 		},
 		handleClick: {
+			table: {
+				disable: true
+			}
+		},
+		classes: {
 			table: {
 				disable: true
 			}
@@ -22,7 +31,8 @@
 	}}
 	args={{
 		label: 'Button',
-		disabled: false
+		disabled: false,
+		size: 'medium'
 	}}
 />
 
