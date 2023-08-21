@@ -12,7 +12,7 @@
 		: 'FFFFFF'}; width: 100%; height: 100%"
 >
 	{#if text}
-		<h1 style="color: #{/^[0-9A-F]{6}$/i.test(textColor) ? textColor : '000000'}; font-size: 100px">
+		<h1 style="color: #{/^[0-9A-F]{6}$/i.test(textColor) ? textColor : '000000'}; font-size: 200px">
 			{text}
 		</h1>
 	{/if}
