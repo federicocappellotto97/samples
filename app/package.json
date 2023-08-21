@@ -50,10 +50,14 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@resvg/resvg-js": "^2.4.1",
 		"@sanity/client": "^6.4.4",
 		"class-variance-authority": "^0.7.0",
 		"eslint-plugin-prettier": "^5.0.0",
 		"prettier-plugin-jsdoc": "^1.0.1",
+		"satori": "^0.10.3",
+		"satori-html": "^0.3.2",
+		"svelte-component-to-image": "^0.1.0",
 		"svelte-icons": "^2.1.0"
 	},
 	"prettier": {
