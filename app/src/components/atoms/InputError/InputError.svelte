@@ -20,6 +20,6 @@
 		{#if hasIcon}
 			<span class="mr-1 inline-block h-4 align-middle"><FaExclamationTriangle /></span>
 		{/if}
-		<span transition:typewriter={{}}>{error}</span>
+		<span in:typewriter={{}}>{error}</span>
 	</p>
 {/if}
