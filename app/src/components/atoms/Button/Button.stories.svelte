@@ -2,7 +2,7 @@
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
 
 	import Button from './Button.svelte';
-	import IoIosClose from 'svelte-icons/io/IoIosClose.svelte';
+	import FaTimes from 'svelte-icons/fa/FaTimes.svelte';
 </script>
 
 <Meta
@@ -48,6 +48,6 @@
 
 <Story name="Icon" args={{ variant: 'icon' }} let:args>
 	<Button {...args}>
-		<IoIosClose />
+		<FaTimes />
 	</Button>
 </Story>

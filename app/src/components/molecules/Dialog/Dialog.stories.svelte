@@ -19,7 +19,7 @@
 		}}>show modal</Button
 	>
 
-	<Dialog bind:showModal classes="space-y-4">
+	<Dialog bind:showModal>
 		<h2 class="text-24 font-bold">Title</h2>
 		<p>
 			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis esse voluptatum non vero

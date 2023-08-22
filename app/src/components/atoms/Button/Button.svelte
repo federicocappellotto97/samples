@@ -30,6 +30,7 @@
 	{disabled}
 	{...$$restProps}
 	on:mousedown={() => (pressed = true)}
+	draggable={false}
 >
 	<span class={buttonChild({ variant })} />
 	<span class="relative"><slot /></span>

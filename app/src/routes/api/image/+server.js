@@ -60,7 +60,7 @@ export const GET = async ({ url }) => {
 						? `${width}x${height}`
 						: url.searchParams.get('text'),
 				bgColor: url.searchParams.get('bgColor') || 'FFFFFF',
-				textColor: url.searchParams.get('textColor') || 'FFFFFF',
+				textColor: url.searchParams.get('textColor') || '000000',
 				img: dalleImg,
 				width
 			},

@@ -15,6 +15,6 @@
 >
 	<h1 class="text-128 font-medium">{title}</h1>
 	{#if content}
-		<div class="max-w-md">{@html content}</div>
+		<div class="text-20 max-w-md">{@html content}</div>
 	{/if}
 </div>

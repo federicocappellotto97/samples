@@ -1,6 +1,4 @@
 <script>
-	import HeroBigTitle from '../components/organisms/HeroBigTitle/HeroBigTitle.svelte';
-
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>

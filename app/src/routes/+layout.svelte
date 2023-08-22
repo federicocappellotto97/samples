@@ -16,7 +16,7 @@
 <main
 	class="mx-auto min-h-screen max-w-[2560px] overflow-hidden rounded-3xl border-2 border-black bg-sky-50"
 >
-	<Header {title} menu={menu.find((m) => m.key == 'primary')} />
+	<Header {title} menu={menu.find((/** @type {{ key: string; }} */ m) => m.key == 'primary')} />
 
 	<slot />
 </main>

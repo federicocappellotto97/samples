@@ -58,7 +58,7 @@ const buttonVariants = cva(
 			{
 				size: 'medium',
 				variant: 'icon',
-				class: 'w-10 p-1'
+				class: 'w-10 p-2'
 			},
 			{
 				size: 'medium',

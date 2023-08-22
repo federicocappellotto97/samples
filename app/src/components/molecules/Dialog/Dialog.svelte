@@ -1,6 +1,6 @@
 <script>
 	import { cx } from 'class-variance-authority';
-	import IoIosClose from 'svelte-icons/io/IoIosClose.svelte';
+	import FaTimes from 'svelte-icons/fa/FaTimes.svelte';
 	import { fade, scale } from 'svelte/transition';
 	import Button from '../../atoms/Button/Button.svelte';
 	/** @type {boolean} */
@@ -29,7 +29,7 @@
 			)}
 		>
 			<span class="absolute right-0 top-0 -translate-y-1/2 translate-x-1/2">
-				<Button handleClick={() => (showModal = false)} variant="icon"><IoIosClose /></Button>
+				<Button handleClick={() => (showModal = false)} variant="icon"><FaTimes /></Button>
 			</span>
 			<div class="space-y-4 p-8">
 				<slot />
