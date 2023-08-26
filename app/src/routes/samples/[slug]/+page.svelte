@@ -11,7 +11,7 @@
 {#if items}
 	<div class="bg-tertiary grid grid-cols-2">
 		{#each items as item}
-			<SampleCard {...item} isOdd={items.length % 2 === 0} />
+			<SampleCard {...item} />
 		{/each}
 	</div>
 {/if}

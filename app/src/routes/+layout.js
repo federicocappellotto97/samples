@@ -20,8 +20,5 @@ export async function load() {
 	const settings = await client.fetch(querySettings);
 	const menu = await client.fetch(queryMenu);
 
-	console.log(settings);
-	console.log(menu);
-
 	return { settings, menu };
 }

@@ -18,7 +18,7 @@
 </script>
 
 <div
-	class="grid grid-cols-2 border-b-2 border-black"
+	class="grid grid-cols-2"
 	class:bg-primary={variant === 'primary'}
 	class:bg-secondary={variant === 'secondary'}
 	class:bg-tertiary={variant === 'tertiary'}

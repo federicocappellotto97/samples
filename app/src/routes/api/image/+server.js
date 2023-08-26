@@ -48,8 +48,8 @@ export const GET = async ({ url }) => {
 		const width = url?.searchParams?.get('width') ? parseInt(url.searchParams.get('width')) : 1;
 		const height = url?.searchParams?.get('height') ? parseInt(url.searchParams.get('height')) : 1;
 		const prompt = url?.searchParams?.get('prompt') ? url.searchParams.get('prompt') : null;
-
-		const dalleImg = await dalle(prompt);
+		let dalleImg;
+		if (OPENAI_API_KEY && prompt) dalleImg = await dalle(prompt);
 
 		const options = {
 			width,

@@ -1,4 +1,5 @@
 <script>
+	import Footer from '../components/organisms/Footer/Footer.svelte';
 	import Header from '../components/organisms/Header/Header.svelte';
 	import '../styles/app.css';
 	import '../styles/fonts.css';
@@ -14,9 +15,13 @@
 </svelte:head>
 
 <main
-	class="mx-auto min-h-screen max-w-[2560px] overflow-hidden rounded-3xl border-2 border-black bg-sky-50"
+	class="mx-auto flex min-h-screen max-w-[2560px] flex-col overflow-hidden rounded-3xl border-2 border-black bg-sky-50"
 >
 	<Header {title} menu={menu.find((/** @type {{ key: string; }} */ m) => m.key == 'primary')} />
 
-	<slot />
+	<div class="contents divide-y-2 divide-black">
+		<slot />
+	</div>
+
+	<Footer {title} />
 </main>

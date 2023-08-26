@@ -6,7 +6,7 @@
 </script>
 
 {#if items}
-	<div class="grid grid-cols-1 border-b-2 border-black lg:grid-cols-2">
+	<div class="grid grid-cols-1 lg:grid-cols-2">
 		{#each items as item, i}
 			<div
 				class="text-20 lg:text-32 flex flex-col justify-center border-t-2 border-black p-8 text-center font-medium first:border-t-0 lg:p-16 lg:odd:border-r-2 lg:[&:nth-child(2)]:border-t-0"

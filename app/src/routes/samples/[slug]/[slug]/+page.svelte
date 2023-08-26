@@ -1,9 +1,9 @@
 <script>
-	import SectionTextImage from '../../../../components/organisms/SectionTextImage/SectionTextImage.svelte';
+	import HeroBigTitle from '../../../../components/organisms/HeroBigTitle/HeroBigTitle.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
 	const { title, image } = data;
 </script>
 
-<SectionTextImage {title} {image} variant="secondary" />
+<HeroBigTitle {title} {image} />

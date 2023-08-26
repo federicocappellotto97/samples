@@ -7,13 +7,10 @@
 	export let image;
 	/** @type {string} */
 	export let url;
-	/** @type {boolean} */
-	export let isOdd = true;
 </script>
 
 <div
-	class="space-y-4 border-b-2 border-r-2 border-black p-8 first:border-t-0 last:border-b-0 even:border-r-0"
-	class:[&:nth-last-child(2)]:border-b-0={isOdd}
+	class="space-y-4 border-b-2 border-r-2 border-black p-12 first:border-t-0 last:border-b-0 even:border-r-0 odd:[&:nth-last-child(2)]:border-b-0"
 >
 	<div
 		class="relative aspect-[1.5] w-full overflow-hidden rounded-lg border-2 border-black shadow-lg"

@@ -11,7 +11,7 @@
 	export let linkVariant = 'primary';
 </script>
 
-<div class="border-b-2 border-black px-16 py-20">
+<div class="px-16 py-20">
 	<div class="m-auto flex max-w-lg flex-col items-center space-y-6 text-center">
 		{#if title}
 			<h2 class="text-72 font-medium leading-none">{title}</h2>
