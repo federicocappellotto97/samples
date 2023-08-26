@@ -9,6 +9,10 @@ const buttonVariants = cva(
 				primary: 'bg-primary rounded-lg',
 				secondary: 'bg-secondary rounded-lg',
 				tertiary: 'bg-tertiary rounded-lg',
+				quaternary: 'bg-quarterary rounded-lg',
+				quinary: 'bg-quinary rounded-lg',
+				senary: 'bg-senary rounded-lg',
+				setary: 'bg-setary rounded-lg',
 				icon: 'aspect-square rounded-full bg-primary' //set shadow-md after merge
 			},
 			pressed: {
@@ -18,41 +22,45 @@ const buttonVariants = cva(
 			size: {
 				small: '',
 				medium: ''
+			},
+			selected: {
+				true: '',
+				false: 'opacity-60'
 			}
 		},
 		compoundVariants: [
 			{
 				size: 'medium',
-				variant: ['primary', 'secondary', 'tertiary'],
+				variant: ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'setary'],
 				pressed: false,
 				class: 'shadow-lg'
 			},
 			{
 				size: 'medium',
-				variant: ['primary', 'secondary', 'tertiary'],
+				variant: ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'setary'],
 				pressed: true,
 				class: 'translate-x-[4px] translate-y-[6px]'
 			},
 			{
 				size: 'small',
-				variant: ['primary', 'secondary', 'tertiary'],
+				variant: ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'setary'],
 				pressed: false,
 				class: 'shadow-md'
 			},
 			{
 				size: 'small',
-				variant: ['primary', 'secondary', 'tertiary'],
+				variant: ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'setary'],
 				pressed: true,
 				class: 'translate-x-[2px] translate-y-[4px]'
 			},
 			{
 				size: 'small',
-				variant: ['primary', 'secondary', 'tertiary'],
+				variant: ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'setary'],
 				class: 'text-14 py-2 px-4'
 			},
 			{
 				size: 'medium',
-				variant: ['primary', 'secondary', 'tertiary'],
+				variant: ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'setary'],
 				class: 'text-16 py-4 px-8'
 			},
 			{
@@ -88,6 +96,11 @@ const buttonVariants = cva(
 				variant: 'icon',
 				pressed: true,
 				class: 'translate-x-[1px] translate-y-[2px]'
+			},
+			{
+				variant: 'quinary',
+				selected: true,
+				class: 'bg-senary'
 			}
 		],
 		defaultVariants: {
@@ -112,7 +125,15 @@ const buttonChildVariants = cva(
 				primary: 'bg-secondary',
 				secondary: 'bg-tertiary',
 				tertiary: 'bg-primary',
+				quaternary: 'bg-quinary',
+				quinary: 'bg-senary',
+				senary: 'bg-setary',
+				setary: 'bg-quaternary',
 				icon: 'bg-secondary'
+			},
+			selected: {
+				true: '',
+				false: 'opacity-75'
 			}
 		},
 		defaultVariants: {
