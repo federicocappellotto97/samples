@@ -14,8 +14,8 @@
  * @typedef {Object} Image
  * @property {string} src - The label or text of the link.
  * @property {string} alt - The URL the link points to.
- * @property {number} width - The target window or frame where the linked content will open.
- * @property {number} height - The target window or frame where the linked content will open.
+ * @property {number} [width] - The target window or frame where the linked content will open.
+ * @property {number} [height] - The target window or frame where the linked content will open.
  */
 
 exports.unused = {};

@@ -6,13 +6,13 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-	const { title, image, images } = data;
+	const { title, image, images, type } = data;
 
 	/** @type {string} */
 	let selected = 'hd';
 </script>
 
-<HeroBigTitle {title} {image} variant="secondary" />
+<HeroBigTitle {title} {image} caption={type} variant="secondary" />
 <div class="bg-tertiary space-y-8 px-16 py-10">
 	<ul class="flex gap-8">
 		{#each [...new Set(images.map((item) => item.resolution))] as res (res)}
@@ -27,12 +27,13 @@
 		{/each}
 	</ul>
 	<ul class="flex items-center gap-8">
-		{#each images.filter((item) => item.resolution === selected) as { format }, index (format + '-' + selected)}
-			<li in:fly={{ delay: index * 200, duration: 300 }}>
+		{#each images.filter((item) => item.resolution === selected) as { format, size }, index (format + '-' + selected)}
+			<li in:fly={{ delay: index * 150, duration: 400, x: -20, y: 20 }} class="space-y-4">
 				<Button>
 					<FaDownload slot="icon" />
 					.{format}
 				</Button>
+				<p class="text-center font-medium">{size}</p>
 			</li>
 		{/each}
 	</ul>

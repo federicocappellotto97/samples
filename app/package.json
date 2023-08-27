@@ -15,6 +15,7 @@
 		"plop": "plop"
 	},
 	"devDependencies": {
+		"@portabletext/svelte": "0.2.0",
 		"@storybook/addon-essentials": "^7.3.0",
 		"@storybook/addon-interactions": "^7.3.0",
 		"@storybook/addon-links": "^7.3.0",

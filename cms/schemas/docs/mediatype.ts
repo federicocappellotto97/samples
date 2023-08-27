@@ -21,5 +21,15 @@ export default defineType({
         source: 'name',
       },
     }),
+    defineField({
+      name: 'content',
+      type: 'array',
+      title: 'Content',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    }),
   ],
 })

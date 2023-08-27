@@ -22,6 +22,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'preview',
+      type: 'file',
+      title: 'Preview',
+    }),
+    defineField({
       title: 'Samples',
       name: 'samples',
       type: 'array',
